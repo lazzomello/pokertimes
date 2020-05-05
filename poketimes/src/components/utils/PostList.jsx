@@ -1,16 +1,17 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import Post from '../Post'
-
+// import pokeball from '../../pokeball.png'
+import logo from '../../logo.png'
 export default function PostList({posts}) {
 
      const postList = posts.length ?(
       posts.map(post=>{
         return(
           <div className="post card" key={post.id}>
+            <img className="imagem" src={logo} alt="pokeball"/>
             <div className="card-content">
               <Link to={`/${post.id}`} >
-               <span className="card-title">{post.title}</span>
+               <span className="card-title red-text">{post.title}</span>
               </Link>  
               <p>{post.body}</p>
             </div>
@@ -21,7 +22,7 @@ export default function PostList({posts}) {
         <div className="center">No posts yet</div>
     )
     return (
-      <div>
+      <div className="container home">
         { postList }
       </div>
     );

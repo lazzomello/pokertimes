@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 import axios from 'axios'
 import PostList from './utils/PostList'
+ 
 
 class Home extends Component  {
 
@@ -20,7 +21,7 @@ class Home extends Component  {
     return (
       <div className="container">
         <h4 className="center">Home</h4>
-          <PostList posts={this.state.posts}/>
+        <PostList posts={this.state.posts}/>
       </div>
     )
   }
